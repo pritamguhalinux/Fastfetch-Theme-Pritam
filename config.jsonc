@@ -1,132 +1,129 @@
+// Based on exmaple 14.jsonc -> Inspired by Catnap
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-
-    "logo": {
-        //"type": "chafa",
-        "source": "/home/pritam/.config/fastfetch/jew-linux.png",
-        "width": 35,
-        "height": 19,
-        "padding": {
-            "right": 3
-        }
-    },
-
+  "logo": {
+    //"padding": {
+      //  "top": 2,
+        //"left": 2
+    //},
+    "source": "/home/pritam/.config/fastfetch/jew-linux.png",
+    "height": 20,
+    "width": 35
+},
     "display": {
-        "separator": " │ ",
+        "separator": " : ",
     },
-
     "modules": [
 
-        {
-            "type": "custom",
-            "format": "\u001b[34m                  Lord Pritam's Specification"
+    {
+            "type": "custom", // HardwareStart
+            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
+            "format": "\u001b[32m      Lord Pritam's Workstation's Specifications"
         },
         {
-            "type": "custom",
-            "format": "\u001b[36m╭──────────────────────────────────────────────────────────────╮"
+            "type": "custom", // HardwareStart
+            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
+            "format": "\u001b[34m                     Hardware "
         },
-
         {
-            "type": "title",
-            "format": "\u001b[36m│  \u001b[32m{user-name}@{host-name}"
-        },
-
-        {
-            "type": "custom",
-            "format": "\u001b[36m├──────────────────────────────────────────────────────────────┤"
-        },
-
-        {
-            "type": "os",
-            "key": "│  OS       "
-        },
-
-        {
-            "type": "host",
-            "key": "│  Host     "
-        },
-
-        {
-            "type": "kernel",
-            "key": "│  Kernel   "
-        },
-
-        {
-            "type": "uptime",
-            "key": "│  Uptime   "
-        },
-
-        {
-            "type": "packages",
-            "key": "│  Packages "
-        },
-
-        {
-            "type": "shell",
-            "key": "│  Shell    "
-        },
-
-        {
-            "type": "terminal",
-            "key": "│  Terminal "
-        },
-
-        {
-            "type": "de",
-            "key": "│  Desktop  "
-        },
-
-        {
-            "type": "wm",
-            "key": "│  WM       "
-        },
-
-        {
+            "key": "CPU",
             "type": "cpu",
-            "key": "│  CPU      "
+            "showPeCoreCount": true,
+            "keyColor": "33"
         },
-
         {
+            "key": "GPU",
             "type": "gpu",
-            "key": "│  GPU      "
+            "keyColor": "32"
         },
-
         {
-            "type": "memory",
-            "key": "│  Memory   "
+            "key": "Display",
+            "type": "display",
+            "keyColor": "36"
         },
-
         {
+            "key": "Disk",
             "type": "disk",
-            "key": "│  Disk     "
+            "folders": "/",
+            "keyColor": "34"
         },
-
         {
-            "type": "custom",
-            "format": "\u001b[36m├──────────────────────────────────────────────────────────────┤"
+            "key": "Disk",
+            "type": "disk",
+            "folders": "/home",
+            "keyColor": "94"
         },
-
         {
-            "type": "colors",
-            "key": "│\u001b[94m  Colors   ",
-            "symbol": "circle"
+            "key": "Memory",
+            "type": "memory",
+            "keyColor": "31"
         },
-
         {
-            "type": "custom",
-            "format": "\u001b[36m╰──────────────────────────────────────────────────────────────╯"
+            "type": "custom", // InformationEnd
+            "format": "\u001b[32m      ──────────────────────────────────────────"
         },
-
-        "break",
-
         {
-            "type": "custom",
-            "format": "\u001b[96m            ✡  עם ישראל חי  ✡"
+            "type": "custom", // SoftwareStart
+            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
+            "format": "\u001b[34m                    Software "
         },
-
         {
-            "type": "custom",
-            "format": "        Shalom • Linux • Freedom"
+            "key": "OS",
+            "type": "os",
+            "keyColor": "33"
+        },
+        {
+            "key": "Kernel",
+            "type": "kernel",
+            "keyColor": "93"
+        },
+        {
+            "key": "DM",
+            "type": "lm",
+            "keyColor": "35"
+        },
+        {
+            "key": "DE",
+            "type": "de",
+            "keyColor": "91"
+        },
+        {
+            "key": "WM",
+            "type": "wm",
+            "keyColor": "32"
+        },
+        {
+            "key": "Theme",
+            "type": "theme",
+            "keyColor": "92"
+        },
+        {
+            "key": "Icons",
+            "type": "icons",
+            "keyColor": "36"
+        },
+        {
+            "key": "Font",
+            "type": "font",
+            "keyColor": "96"
+        },
+        {
+            "key": "Font",
+            "type": "terminalfont",
+            "keyColor": "34"
+        },
+        {
+            "key": "Terminal",
+            "type": "terminal",
+            "keyColor": "94"
+        },
+        {
+            "key": "Shell",
+            "type": "shell",
+            "keyColor": "34"
+        },
+        {
+            "type": "custom", // InformationEnd
+            "format": "\u001b[32m     ──────────────────────────────────────────"
         }
     ]
 }
